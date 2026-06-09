@@ -11,6 +11,7 @@ export function initAnimations(): void {
   revealOnScroll();
   animateCounters();
   initMarquee();
+  initGallery();
 
   // Keep trigger positions correct after layout shifts (font swap, resize).
   let resizeTimer: number | undefined;
@@ -112,4 +113,43 @@ function initMarquee(): void {
 
   marquee.addEventListener("pointerenter", () => tween.timeScale(0.2));
   marquee.addEventListener("pointerleave", () => tween.timeScale(1));
+}
+
+/**
+ * Pinned horizontal scrub for the "In the Field" gallery: vertical scroll drives
+ * the rail sideways. Only on wide, fine-pointer viewports; everywhere else the
+ * CSS leaves a native horizontal scroll rail.
+ */
+function initGallery(): void {
+  const finePointer = window.matchMedia("(pointer: fine)").matches;
+  if (!finePointer || window.innerWidth < 1024) return;
+
+  const section = document.querySelector<HTMLElement>("[data-gallery]");
+  const rail = document.querySelector<HTMLElement>("[data-gallery-rail]");
+  const track = document.querySelector<HTMLElement>("[data-gallery-track]");
+  if (!section || !rail || !track) return;
+
+  section.classList.add("gallery--pinned");
+
+  const amount = (): number => Math.max(0, track.scrollWidth - rail.clientWidth);
+  if (amount() <= 0) {
+    section.classList.remove("gallery--pinned");
+    return;
+  }
+
+  const tween = gsap.to(track, { x: () => -amount(), ease: "none" });
+
+  ScrollTrigger.create({
+    trigger: rail,
+    start: "top top",
+    end: () => "+=" + amount(),
+    pin: true,
+    scrub: 0.6,
+    animation: tween,
+    anticipatePin: 1,
+    invalidateOnRefresh: true,
+  });
+
+  // Image widths set the track size, so recalc once everything has loaded.
+  window.addEventListener("load", () => ScrollTrigger.refresh());
 }

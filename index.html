@@ -44,9 +44,6 @@
       <div class="cursor__ring"></div>
     </div>
 
-    <!-- Floating image preview for linked work rows (enhancement) -->
-    <div class="work-preview" aria-hidden="true"><img alt="" /></div>
-
     <!-- ============================ HEADER ============================ -->
     <header class="header" data-header>
       <div class="header__inner">
@@ -57,9 +54,9 @@
 
         <nav class="nav" aria-label="Primary">
           <ul class="nav__list">
+            <li><a class="nav__link" href="#about" data-nav>About</a></li>
             <li><a class="nav__link" href="#work" data-nav>Work</a></li>
             <li><a class="nav__link" href="#expertise" data-nav>Expertise</a></li>
-            <li><a class="nav__link" href="#about" data-nav>About</a></li>
             <li><a class="nav__link" href="#contact" data-nav>Contact</a></li>
           </ul>
         </nav>
@@ -91,9 +88,9 @@
     <div class="menu-overlay" id="mobile-menu" data-menu hidden>
       <nav class="menu-overlay__nav" aria-label="Mobile">
         <ul>
-          <li><a href="#work" data-menu-link><span class="menu-overlay__index">01</span> Work</a></li>
-          <li><a href="#expertise" data-menu-link><span class="menu-overlay__index">02</span> Expertise</a></li>
-          <li><a href="#about" data-menu-link><span class="menu-overlay__index">03</span> About</a></li>
+          <li><a href="#about" data-menu-link><span class="menu-overlay__index">01</span> About</a></li>
+          <li><a href="#work" data-menu-link><span class="menu-overlay__index">02</span> Work</a></li>
+          <li><a href="#expertise" data-menu-link><span class="menu-overlay__index">03</span> Expertise</a></li>
           <li><a href="#contact" data-menu-link><span class="menu-overlay__index">04</span> Contact</a></li>
         </ul>
       </nav>
@@ -203,254 +200,10 @@
         </ul>
       </section>
 
-      <!-- ============================ WORK ============================ -->
-      <section class="work section" id="work" aria-labelledby="work-title">
-        <div class="section__head">
-          <p class="section__eyebrow">02 / Selected Work</p>
-          <h2 class="section__title" id="work-title" data-reveal>
-            Flagship initiatives, from policy to product.
-          </h2>
-        </div>
-
-        <ol class="projects">
-          <li class="project" data-reveal>
-            <span class="project__index">01</span>
-            <div class="project__body">
-              <h3 class="project__title">The “My Journey” Performance Platform</h3>
-              <p class="project__desc">
-                Directed the redesign of the ministry performance-management platform
-                for ~25,000 users, introducing KPI banks, AI-generated suggestions for
-                goals and competencies, and integration across HR, professional
-                development, and licensing.
-              </p>
-            </div>
-            <div class="project__aside">
-              <span class="project__org">Ministry of Education</span>
-              <span class="project__year">2024–25</span>
-              <ul class="project__tags"><li>Digital Product</li><li>AI</li><li>Performance</li></ul>
-            </div>
-            <span class="project__arrow" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </li>
-
-          <li class="project" data-reveal data-preview="images/field-competency-framework.jpg">
-            <span class="project__index">02</span>
-            <div class="project__body">
-              <h3 class="project__title">UAE National Educators’ Competency Framework</h3>
-              <p class="project__desc">
-                Authored the 2025 unified competency reference for teachers, school
-                leaders, and specialists, guiding recruitment, appraisal, professional
-                development, and career-path planning nationwide.
-              </p>
-            </div>
-            <div class="project__aside">
-              <span class="project__org">Ministry of Education</span>
-              <span class="project__year">2025</span>
-              <ul class="project__tags"><li>Policy</li><li>Frameworks</li><li>Governance</li></ul>
-            </div>
-            <span class="project__arrow" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </li>
-
-          <li class="project" data-reveal data-preview="images/field-skill-gap.jpg">
-            <span class="project__index">03</span>
-            <div class="project__body">
-              <h3 class="project__title">National Skill-Gap Assessment</h3>
-              <p class="project__desc">
-                Translated framework domains into blueprints, analytics, and Training
-                Needs Analyses for 13,000+ teachers and school leaders at individual,
-                school, regional, and national levels.
-              </p>
-            </div>
-            <div class="project__aside">
-              <span class="project__org">Ministry of Education</span>
-              <span class="project__year">2024–25</span>
-              <ul class="project__tags"><li>Analytics</li><li>TNA</li><li>Strategy</li></ul>
-            </div>
-            <span class="project__arrow" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </li>
-
-          <li class="project" data-reveal>
-            <span class="project__index">04</span>
-            <div class="project__body">
-              <h3 class="project__title">MurshidAI</h3>
-              <p class="project__desc">
-                Built an AI guidance agent for academic, social, and career support,
-                giving students personalized recommendations and pathway planning.
-              </p>
-            </div>
-            <div class="project__aside">
-              <span class="project__org">Emirates Schools Establishment</span>
-              <span class="project__year">2024</span>
-              <ul class="project__tags"><li>AI Agent</li><li>Guidance</li><li>NLP</li></ul>
-            </div>
-            <span class="project__arrow" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </li>
-
-          <li class="project" data-reveal data-preview="images/field-power-bi.jpg">
-            <span class="project__index">05</span>
-            <div class="project__body">
-              <h3 class="project__title">The Deira App</h3>
-              <p class="project__desc">
-                Created a Power BI solution integrating data from 240,000+ students so
-                school teams and executive leaders could access operational and
-                performance insight in one place.
-              </p>
-            </div>
-            <div class="project__aside">
-              <span class="project__org">Emirates Schools Establishment</span>
-              <span class="project__year">2024</span>
-              <ul class="project__tags"><li>Power BI</li><li>Data</li><li>Operations</li></ul>
-            </div>
-            <span class="project__arrow" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </li>
-
-          <li class="project" data-reveal>
-            <span class="project__index">06</span>
-            <div class="project__body">
-              <h3 class="project__title">Aoun</h3>
-              <p class="project__desc">
-                Designed an AI-powered psychometric application that won first place at
-                the UAE Hackathon 2024 for innovative government employees.
-              </p>
-            </div>
-            <div class="project__aside">
-              <span class="project__org">UAE Hackathon</span>
-              <span class="project__year">2024 · 1st place</span>
-              <ul class="project__tags"><li>AI</li><li>Psychometrics</li><li>Award</li></ul>
-            </div>
-            <span class="project__arrow" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </li>
-        </ol>
-      </section>
-
-      <!-- ============================ IN THE FIELD (GALLERY) ============================ -->
-      <section class="gallery section" id="gallery" aria-labelledby="gallery-title">
-        <div class="section__head">
-          <p class="section__eyebrow">03 / In the Field</p>
-          <h2 class="section__title" id="gallery-title" data-reveal>
-            Strategy, in the room where it happens.
-          </h2>
-        </div>
-
-        <div class="gallery__grid">
-          <figure class="gallery__item" data-reveal>
-            <img src="%BASE_URL%images/field-competency-framework.jpg" alt="Hany Moussa presenting the national educators' career-progression framework on screen" width="1600" height="942" loading="lazy" decoding="async" />
-            <figcaption>Presenting the national career-progression framework</figcaption>
-          </figure>
-          <figure class="gallery__item" data-reveal>
-            <img src="%BASE_URL%images/field-warm.jpg" alt="Hany Moussa smiling at a professional event" width="984" height="1600" loading="lazy" decoding="async" />
-            <figcaption>Between sessions</figcaption>
-          </figure>
-          <figure class="gallery__item" data-reveal>
-            <img src="%BASE_URL%images/field-power-bi.jpg" alt="Hany Moussa presenting a Power BI dashboard" width="1600" height="888" loading="lazy" decoding="async" />
-            <figcaption>Power BI dashboards in review</figcaption>
-          </figure>
-          <figure class="gallery__item" data-reveal>
-            <img src="%BASE_URL%images/field-skill-gap.jpg" alt="Hany Moussa presenting skill-gap analytics summarised by project" width="1600" height="826" loading="lazy" decoding="async" />
-            <figcaption>Skill-gap analytics, summarised by project</figcaption>
-          </figure>
-          <figure class="gallery__item" data-reveal>
-            <img src="%BASE_URL%images/field-dialogue.jpg" alt="Hany Moussa in conversation with a colleague" width="1600" height="1030" loading="lazy" decoding="async" />
-            <figcaption>In dialogue with stakeholders</figcaption>
-          </figure>
-          <figure class="gallery__item" data-reveal>
-            <img src="%BASE_URL%images/field-personality.jpg" alt="Full-length portrait of Hany Moussa in a corridor" width="853" height="1280" loading="lazy" decoding="async" />
-            <figcaption>On site</figcaption>
-          </figure>
-          <figure class="gallery__item" data-reveal>
-            <img src="%BASE_URL%images/field-stakeholders.jpg" alt="Hany Moussa listening in a stakeholder meeting" width="1600" height="866" loading="lazy" decoding="async" />
-            <figcaption>Stakeholder alignment workshop</figcaption>
-          </figure>
-          <figure class="gallery__item" data-reveal>
-            <img src="%BASE_URL%images/field-leadership.jpg" alt="Hany Moussa walking through a Ministry corridor with a colleague" width="1280" height="799" loading="lazy" decoding="async" />
-            <figcaption>On the move</figcaption>
-          </figure>
-          <figure class="gallery__item" data-reveal>
-            <img src="%BASE_URL%images/field-office.jpg" alt="Hany Moussa working at a screen in a modern office" width="1600" height="965" loading="lazy" decoding="async" />
-            <figcaption>Heads-down</figcaption>
-          </figure>
-          <figure class="gallery__item" data-reveal>
-            <img src="%BASE_URL%images/field-assessment.jpg" alt="Hany Moussa presenting an assessment-methodology slide" width="1600" height="900" loading="lazy" decoding="async" />
-            <figcaption>Assessment-methodology session</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <!-- ============================ EXPERTISE ============================ -->
-      <section class="expertise section" id="expertise" aria-labelledby="expertise-title">
-        <div class="section__head">
-          <p class="section__eyebrow">04 / Expertise</p>
-          <h2 class="section__title" id="expertise-title" data-reveal>
-            Where governance meets data and AI.
-          </h2>
-        </div>
-
-        <div class="marquee" aria-hidden="true" data-marquee>
-          <div class="marquee__track">
-            <span>Program &amp; Project Management</span><span class="marquee__sep">/</span>
-            <span>Education Transformation</span><span class="marquee__sep">/</span>
-            <span>Performance Management</span><span class="marquee__sep">/</span>
-            <span>Competency Frameworks</span><span class="marquee__sep">/</span>
-            <span>Public-Sector Governance</span><span class="marquee__sep">/</span>
-            <span>AI in Education</span><span class="marquee__sep">/</span>
-            <span>Data Analytics</span><span class="marquee__sep">/</span>
-          </div>
-        </div>
-
-        <div class="expertise__grid">
-          <div class="capability" data-reveal>
-            <h3 class="capability__title">Strategy &amp; Governance</h3>
-            <ul class="capability__list">
-              <li>Strategic Planning</li>
-              <li>Policy Development</li>
-              <li>Public-Sector Governance</li>
-              <li>Change Management</li>
-              <li>Stakeholder Management</li>
-              <li>KPI Design</li>
-            </ul>
-          </div>
-          <div class="capability" data-reveal>
-            <h3 class="capability__title">Transformation</h3>
-            <ul class="capability__list">
-              <li>Education Transformation</li>
-              <li>Performance Management</li>
-              <li>Competency Frameworks</li>
-              <li>Training Needs Analysis</li>
-              <li>Digital Transformation</li>
-              <li>Program Delivery</li>
-            </ul>
-          </div>
-          <div class="capability" data-reveal>
-            <h3 class="capability__title">Data &amp; AI Toolkit</h3>
-            <ul class="capability__list capability__list--tools">
-              <li>Power BI</li>
-              <li>Python</li>
-              <li>SQL</li>
-              <li>Machine Learning</li>
-              <li>AI / NLP Tools</li>
-              <li>MS Access</li>
-              <li>JavaScript</li>
-              <li>HTML / CSS</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
       <!-- ============================ ABOUT ============================ -->
       <section class="about section" id="about" aria-labelledby="about-title">
         <div class="section__head">
-          <p class="section__eyebrow">05 / About</p>
+          <p class="section__eyebrow">02 / About</p>
           <h2 class="section__title" id="about-title" data-reveal>
             From the classroom to national strategy.
           </h2>
@@ -597,6 +350,276 @@
         </div>
       </section>
 
+      <!-- ============================ WORK ============================ -->
+      <section class="work section" id="work" aria-labelledby="work-title">
+        <div class="section__head">
+          <p class="section__eyebrow">03 / Selected Work</p>
+          <h2 class="section__title" id="work-title" data-reveal>
+            Flagship initiatives, from policy to product.
+          </h2>
+        </div>
+
+        <ol class="projects">
+          <li class="project" data-reveal>
+            <span class="project__index">01</span>
+            <div class="project__body">
+              <h3 class="project__title">The “My Journey” Performance Platform</h3>
+              <p class="project__desc">
+                Directed the redesign of the ministry performance-management platform
+                for ~25,000 users, introducing KPI banks, AI-generated suggestions for
+                goals and competencies, and integration across HR, professional
+                development, and licensing.
+              </p>
+            </div>
+            <div class="project__aside">
+              <span class="project__org">Ministry of Education</span>
+              <span class="project__year">2024–25</span>
+              <ul class="project__tags"><li>Digital Product</li><li>AI</li><li>Performance</li></ul>
+            </div>
+            <span class="project__arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </li>
+
+          <li class="project" data-reveal>
+            <span class="project__index">02</span>
+            <div class="project__body">
+              <h3 class="project__title">UAE National Educators’ Competency Framework</h3>
+              <p class="project__desc">
+                Authored the 2025 unified competency reference for teachers, school
+                leaders, and specialists, guiding recruitment, appraisal, professional
+                development, and career-path planning nationwide.
+              </p>
+            </div>
+            <div class="project__aside">
+              <span class="project__org">Ministry of Education</span>
+              <span class="project__year">2025</span>
+              <ul class="project__tags"><li>Policy</li><li>Frameworks</li><li>Governance</li></ul>
+            </div>
+            <span class="project__arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </li>
+
+          <li class="project" data-reveal>
+            <span class="project__index">03</span>
+            <div class="project__body">
+              <h3 class="project__title">National Skill-Gap Assessment</h3>
+              <p class="project__desc">
+                Translated framework domains into blueprints, analytics, and Training
+                Needs Analyses for 13,000+ teachers and school leaders at individual,
+                school, regional, and national levels.
+              </p>
+            </div>
+            <div class="project__aside">
+              <span class="project__org">Ministry of Education</span>
+              <span class="project__year">2024–25</span>
+              <ul class="project__tags"><li>Analytics</li><li>TNA</li><li>Strategy</li></ul>
+            </div>
+            <span class="project__arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </li>
+
+          <li class="project" data-reveal>
+            <span class="project__index">04</span>
+            <div class="project__body">
+              <h3 class="project__title">MurshidAI</h3>
+              <p class="project__desc">
+                Built an AI guidance agent for academic, social, and career support,
+                giving students personalized recommendations and pathway planning.
+              </p>
+            </div>
+            <div class="project__aside">
+              <span class="project__org">Emirates Schools Establishment</span>
+              <span class="project__year">2024</span>
+              <ul class="project__tags"><li>AI Agent</li><li>Guidance</li><li>NLP</li></ul>
+            </div>
+            <span class="project__arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </li>
+
+          <li class="project" data-reveal>
+            <span class="project__index">05</span>
+            <div class="project__body">
+              <h3 class="project__title">The Deira App</h3>
+              <p class="project__desc">
+                Created a Power BI solution integrating data from 240,000+ students so
+                school teams and executive leaders could access operational and
+                performance insight in one place.
+              </p>
+            </div>
+            <div class="project__aside">
+              <span class="project__org">Emirates Schools Establishment</span>
+              <span class="project__year">2024</span>
+              <ul class="project__tags"><li>Power BI</li><li>Data</li><li>Operations</li></ul>
+            </div>
+            <span class="project__arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </li>
+
+          <li class="project" data-reveal>
+            <span class="project__index">06</span>
+            <div class="project__body">
+              <h3 class="project__title">Aoun</h3>
+              <p class="project__desc">
+                Designed an AI-powered psychometric application that won first place at
+                the UAE Hackathon 2024 for innovative government employees.
+              </p>
+            </div>
+            <div class="project__aside">
+              <span class="project__org">UAE Hackathon</span>
+              <span class="project__year">2024 · 1st place</span>
+              <ul class="project__tags"><li>AI</li><li>Psychometrics</li><li>Award</li></ul>
+            </div>
+            <span class="project__arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ============================ EXPERTISE ============================ -->
+      <section class="expertise section" id="expertise" aria-labelledby="expertise-title">
+        <div class="section__head">
+          <p class="section__eyebrow">04 / Expertise</p>
+          <h2 class="section__title" id="expertise-title" data-reveal>
+            Where governance meets data and AI.
+          </h2>
+        </div>
+
+        <div class="marquee" aria-hidden="true" data-marquee>
+          <div class="marquee__track">
+            <span>Program &amp; Project Management</span><span class="marquee__sep">/</span>
+            <span>Education Transformation</span><span class="marquee__sep">/</span>
+            <span>Performance Management</span><span class="marquee__sep">/</span>
+            <span>Competency Frameworks</span><span class="marquee__sep">/</span>
+            <span>Public-Sector Governance</span><span class="marquee__sep">/</span>
+            <span>AI in Education</span><span class="marquee__sep">/</span>
+            <span>Data Analytics</span><span class="marquee__sep">/</span>
+          </div>
+        </div>
+
+        <div class="expertise__grid">
+          <div class="capability" data-reveal>
+            <h3 class="capability__title">Strategy &amp; Governance</h3>
+            <ul class="capability__list">
+              <li>Strategic Planning</li>
+              <li>Policy Development</li>
+              <li>Public-Sector Governance</li>
+              <li>Change Management</li>
+              <li>Stakeholder Management</li>
+              <li>KPI Design</li>
+            </ul>
+          </div>
+          <div class="capability" data-reveal>
+            <h3 class="capability__title">Transformation</h3>
+            <ul class="capability__list">
+              <li>Education Transformation</li>
+              <li>Performance Management</li>
+              <li>Competency Frameworks</li>
+              <li>Training Needs Analysis</li>
+              <li>Digital Transformation</li>
+              <li>Program Delivery</li>
+            </ul>
+          </div>
+          <div class="capability" data-reveal>
+            <h3 class="capability__title">Data &amp; AI Toolkit</h3>
+            <ul class="capability__list capability__list--tools">
+              <li>Power BI</li>
+              <li>Python</li>
+              <li>SQL</li>
+              <li>Machine Learning</li>
+              <li>AI / NLP Tools</li>
+              <li>MS Access</li>
+              <li>JavaScript</li>
+              <li>HTML / CSS</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ IN THE FIELD (GALLERY) ============================ -->
+      <section class="gallery" id="gallery" aria-labelledby="gallery-title" data-gallery>
+        <div class="gallery__head section">
+          <p class="section__eyebrow">05 / In the Field</p>
+          <h2 class="section__title" id="gallery-title" data-reveal>
+            Strategy, in the room where it happens.
+          </h2>
+          <p class="gallery__hint" data-reveal>
+            <span class="gallery__hint-line" aria-hidden="true"></span>
+            Scroll to explore
+          </p>
+        </div>
+
+        <div class="gallery__rail" data-gallery-rail>
+          <ul class="gallery__track" data-gallery-track>
+            <li class="gallery__card">
+              <figure>
+                <img src="%BASE_URL%images/field-competency-framework.jpg" alt="Hany Moussa presenting the national educators' career-progression framework on screen" width="1600" height="942" loading="lazy" decoding="async" />
+                <figcaption><span class="gallery__num">01</span><span>Presenting the national career-progression framework</span></figcaption>
+              </figure>
+            </li>
+            <li class="gallery__card">
+              <figure>
+                <img src="%BASE_URL%images/field-warm.jpg" alt="Hany Moussa smiling at a professional event" width="984" height="1600" loading="lazy" decoding="async" />
+                <figcaption><span class="gallery__num">02</span><span>Between sessions</span></figcaption>
+              </figure>
+            </li>
+            <li class="gallery__card">
+              <figure>
+                <img src="%BASE_URL%images/field-power-bi.jpg" alt="Hany Moussa presenting a Power BI dashboard" width="1600" height="888" loading="lazy" decoding="async" />
+                <figcaption><span class="gallery__num">03</span><span>Power BI dashboards in review</span></figcaption>
+              </figure>
+            </li>
+            <li class="gallery__card">
+              <figure>
+                <img src="%BASE_URL%images/field-skill-gap.jpg" alt="Hany Moussa presenting skill-gap analytics summarised by project" width="1600" height="826" loading="lazy" decoding="async" />
+                <figcaption><span class="gallery__num">04</span><span>Skill-gap analytics, summarised by project</span></figcaption>
+              </figure>
+            </li>
+            <li class="gallery__card">
+              <figure>
+                <img src="%BASE_URL%images/field-dialogue.jpg" alt="Hany Moussa in conversation with a colleague" width="1600" height="1030" loading="lazy" decoding="async" />
+                <figcaption><span class="gallery__num">05</span><span>In dialogue with stakeholders</span></figcaption>
+              </figure>
+            </li>
+            <li class="gallery__card">
+              <figure>
+                <img src="%BASE_URL%images/field-personality.jpg" alt="Full-length portrait of Hany Moussa in a corridor" width="853" height="1280" loading="lazy" decoding="async" />
+                <figcaption><span class="gallery__num">06</span><span>On site</span></figcaption>
+              </figure>
+            </li>
+            <li class="gallery__card">
+              <figure>
+                <img src="%BASE_URL%images/field-stakeholders.jpg" alt="Hany Moussa listening in a stakeholder meeting" width="1600" height="866" loading="lazy" decoding="async" />
+                <figcaption><span class="gallery__num">07</span><span>Stakeholder alignment workshop</span></figcaption>
+              </figure>
+            </li>
+            <li class="gallery__card">
+              <figure>
+                <img src="%BASE_URL%images/field-leadership.jpg" alt="Hany Moussa walking through a Ministry corridor with a colleague" width="1280" height="799" loading="lazy" decoding="async" />
+                <figcaption><span class="gallery__num">08</span><span>On the move</span></figcaption>
+              </figure>
+            </li>
+            <li class="gallery__card">
+              <figure>
+                <img src="%BASE_URL%images/field-office.jpg" alt="Hany Moussa working at a screen in a modern office" width="1600" height="965" loading="lazy" decoding="async" />
+                <figcaption><span class="gallery__num">09</span><span>Heads-down</span></figcaption>
+              </figure>
+            </li>
+            <li class="gallery__card">
+              <figure>
+                <img src="%BASE_URL%images/field-assessment.jpg" alt="Hany Moussa presenting an assessment-methodology slide" width="1600" height="900" loading="lazy" decoding="async" />
+                <figcaption><span class="gallery__num">10</span><span>Assessment-methodology session</span></figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
+      </section>
+
       <!-- ============================ CONTACT ============================ -->
       <section class="contact section" id="contact" aria-labelledby="contact-title">
         <div class="contact__inner">
@@ -638,6 +661,10 @@
     <footer class="footer">
       <div class="footer__inner">
         <p class="footer__brand">Hany Moussa</p>
+        <p class="footer__time">
+          <span class="footer__time-label">Dubai</span>
+          <span data-clock>—</span>
+        </p>
         <p class="footer__copy">© <span data-year>2026</span> · Designed &amp; built with intent.</p>
         <a class="footer__top" href="#top" data-magnetic>
           Back to top

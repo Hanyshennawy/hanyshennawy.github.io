@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Hany Moussa">
   <defs>
     <radialGradient id="glow" cx="82%" cy="20%" r="60%">
-      <stop offset="0%" stop-color="#e6a93d" stop-opacity="0.22"/>
-      <stop offset="60%" stop-color="#e6a93d" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#54a3f5" stop-opacity="0.22"/>
+      <stop offset="60%" stop-color="#54a3f5" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="glow2" cx="6%" cy="96%" r="55%">
       <stop offset="0%" stop-color="#5566cc" stop-opacity="0.18"/>
@@ -16,7 +16,7 @@
 
   <g font-family="'Segoe UI', Helvetica, Arial, sans-serif" fill="#f4f2ed">
     <text x="80" y="118" font-size="26" letter-spacing="3" fill="#9a9488">HANY MOUSSA</text>
-    <circle cx="312" cy="110" r="5" fill="#e6a93d"/>
+    <circle cx="312" cy="110" r="5" fill="#54a3f5"/>
     <text x="330" y="118" font-size="26" letter-spacing="3" fill="#9a9488">DUBAI, UAE</text>
 
     <text x="76" y="320" font-size="92" font-weight="700" letter-spacing="-3">Education transformation,</text>
@@ -25,5 +25,5 @@
     <text x="80" y="552" font-size="28" letter-spacing="1" fill="#b9b3a7">Principal Project Manager  ·  Strategy, Transformation &amp; AI in Education</text>
   </g>
 
-  <rect x="80" y="150" width="64" height="3" fill="#e6a93d"/>
+  <rect x="80" y="150" width="64" height="3" fill="#54a3f5"/>
 </svg>

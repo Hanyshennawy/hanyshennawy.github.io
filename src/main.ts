@@ -12,7 +12,6 @@ import { initSmoothScroll } from "./modules/smoothScroll";
 import { initAnimations } from "./modules/animations";
 import { initNav } from "./modules/nav";
 import { initCursor } from "./modules/cursor";
-import { initWorkPreview } from "./modules/workPreview";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -28,16 +27,34 @@ function boot(): void {
     initAnimations();
     if (finePointer) {
       initCursor();
-      initWorkPreview();
     }
   }
 
   initNav(lenis);
+  initClock();
 
   const yearEl = document.querySelector<HTMLElement>("[data-year]");
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
   }
+}
+
+/** Live local time for Dubai (GST, no DST). Runs regardless of motion. */
+function initClock(): void {
+  const el = document.querySelector<HTMLElement>("[data-clock]");
+  if (!el) return;
+  const fmt = new Intl.DateTimeFormat("en-GB", {
+    timeZone: "Asia/Dubai",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+  });
+  const tick = (): void => {
+    el.textContent = `${fmt.format(new Date())} GST`;
+  };
+  tick();
+  window.setInterval(tick, 1000);
 }
 
 if (document.readyState === "loading") {
