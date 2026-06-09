@@ -22,3 +22,7 @@ Thumbs.db
 .env
 .env.*
 !.env.example
+
+# Original photo library kept local-only (curated, optimized copies live in
+# public/images and are the only ones published to the public site/repo).
+assets-source/

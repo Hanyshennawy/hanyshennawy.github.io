@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hany Moussa — Curriculum Vitae</title>
+    <style>
+      @font-face {
+        font-family: "Clash Display";
+        src: url("../src/fonts/clash-display-600.woff2") format("woff2");
+        font-weight: 600;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Clash Display";
+        src: url("../src/fonts/clash-display-500.woff2") format("woff2");
+        font-weight: 500;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "General Sans";
+        src: url("../src/fonts/general-sans-400.woff2") format("woff2");
+        font-weight: 400;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "General Sans";
+        src: url("../src/fonts/general-sans-500.woff2") format("woff2");
+        font-weight: 500;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "General Sans";
+        src: url("../src/fonts/general-sans-600.woff2") format("woff2");
+        font-weight: 600;
+        font-display: swap;
+      }
+
+      :root {
+        --ink: #1b1c1e;
+        --muted: #55585c;
+        --faint: #84878c;
+        --line: #e4e0d8;
+        --accent: #b07d23;
+        --paper: #fbfaf7;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      @page {
+        size: A4;
+        margin: 14mm 0;
+      }
+
+      html {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        font-family: "General Sans", system-ui, sans-serif;
+        color: var(--ink);
+        background: var(--paper);
+        font-size: 10.2pt;
+        line-height: 1.5;
+      }
+
+      .page {
+        width: 210mm;
+        padding: 0 16mm;
+        margin: 0 auto;
+      }
+
+      /* Header */
+      .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 16px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid var(--ink);
+      }
+      .name {
+        font-family: "Clash Display", sans-serif;
+        font-weight: 600;
+        font-size: 30pt;
+        letter-spacing: -0.5px;
+        line-height: 0.95;
+      }
+      .role {
+        margin-top: 4px;
+        font-size: 11pt;
+        color: var(--accent);
+        font-weight: 500;
+        letter-spacing: 0.2px;
+      }
+      .contact {
+        text-align: right;
+        font-size: 9pt;
+        color: var(--muted);
+        line-height: 1.7;
+        white-space: nowrap;
+      }
+      .contact a {
+        color: var(--muted);
+        text-decoration: none;
+      }
+
+      /* Section scaffolding */
+      .section {
+        margin-top: 16px;
+        break-inside: avoid;
+      }
+      .section > h2 {
+        font-family: "General Sans", sans-serif;
+        font-size: 8pt;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--faint);
+        margin-bottom: 8px;
+      }
+
+      .summary {
+        font-size: 10.4pt;
+        color: var(--muted);
+      }
+
+      .comp {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px 6px;
+      }
+      .comp span {
+        font-size: 8.6pt;
+        color: var(--ink);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 2.5px 9px;
+      }
+
+      /* Experience */
+      .job {
+        break-inside: avoid;
+        padding: 9px 0;
+        border-top: 1px solid var(--line);
+      }
+      .job:first-of-type {
+        border-top: none;
+        padding-top: 2px;
+      }
+      .job__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+      }
+      .job__role {
+        font-family: "Clash Display", sans-serif;
+        font-weight: 500;
+        font-size: 12.5pt;
+        letter-spacing: -0.2px;
+      }
+      .job__date {
+        font-size: 8.6pt;
+        color: var(--faint);
+        white-space: nowrap;
+      }
+      .job__org {
+        font-size: 9.2pt;
+        color: var(--accent);
+        margin: 1px 0 5px;
+      }
+      .job ul {
+        list-style: none;
+      }
+      .job li {
+        position: relative;
+        padding-left: 13px;
+        margin-bottom: 2.5px;
+        font-size: 9.6pt;
+        color: var(--muted);
+      }
+      .job li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 7px;
+        width: 4px;
+        height: 4px;
+        background: var(--accent);
+        border-radius: 50%;
+      }
+
+      /* Two-column lower band */
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px 26px;
+      }
+      .stack__item {
+        margin-bottom: 7px;
+      }
+      .stack__item .p {
+        font-size: 9.8pt;
+        font-weight: 500;
+        color: var(--ink);
+      }
+      .stack__item .s {
+        font-size: 8.6pt;
+        color: var(--faint);
+      }
+
+      .impact-list {
+        list-style: none;
+      }
+      .impact-list li {
+        position: relative;
+        padding-left: 13px;
+        margin-bottom: 4px;
+        font-size: 9.6pt;
+        color: var(--muted);
+        break-inside: avoid;
+      }
+      .impact-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 7px;
+        width: 4px;
+        height: 4px;
+        background: var(--accent);
+        border-radius: 50%;
+      }
+      .impact-list strong {
+        color: var(--ink);
+        font-weight: 600;
+      }
+
+      .tools {
+        font-size: 9.4pt;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="head">
+        <div>
+          <h1 class="name">Hany Moussa</h1>
+          <p class="role">Principal Project Manager — Strategy, Transformation &amp; AI in Education</p>
+        </div>
+        <div class="contact">
+          Dubai, UAE<br />
+          +971 54 555 7551<br />
+          hany.shennawy@live.com<br />
+          linkedin.com/in/hany-moussa-9239b77a
+        </div>
+      </header>
+
+      <section class="section">
+        <h2>Profile</h2>
+        <p class="summary">
+          Principal Project Manager with experience leading national-scale education
+          transformation, performance-management reform, competency-framework design,
+          and AI-enabled analytics within the UAE Ministry of Education and Emirates
+          Schools Establishment. Led and supported initiatives affecting approximately
+          25,000 school staff and 240,000+ students, including the redesign of a ministry
+          performance platform, the UAE National Educators' Competency Framework (2025),
+          skill-gap assessments for 13,000+ educators, and multiple AI-powered education
+          solutions. Blends program leadership, policy alignment, stakeholder management,
+          data analytics, and digital product delivery.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Core Competencies</h2>
+        <div class="comp">
+          <span>Program &amp; Project Management</span>
+          <span>Strategic Planning</span>
+          <span>Education Transformation</span>
+          <span>Performance Management</span>
+          <span>Competency Frameworks</span>
+          <span>Policy Development</span>
+          <span>Public-Sector Governance</span>
+          <span>Digital Transformation</span>
+          <span>AI in Education</span>
+          <span>Training Needs Analysis</span>
+          <span>Stakeholder Management</span>
+          <span>KPI Design</span>
+          <span>Data Analytics</span>
+          <span>Change Management</span>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Professional Experience</h2>
+
+        <div class="job">
+          <div class="job__top">
+            <span class="job__role">Principal Project Manager</span>
+            <span class="job__date">Sep 2024 — Present</span>
+          </div>
+          <p class="job__org">Ministry of Education, Professional Development Sector · Dubai, UAE</p>
+          <ul>
+            <li>Lead ministry-level programs across performance management, educator competency standards, AI enablement, and talent development for the public-school workforce.</li>
+            <li>Drove performance-management reform for approximately 25,000 school staff, revamping policy, guidebooks, process logic, and role-aligned KPI structures in line with federal HR legislation and Cabinet executive regulations.</li>
+            <li>Directed the redesign of the "My Journey" performance-management platform for approximately 25,000 users, introducing KPI banks, AI-generated suggestions for goals and competencies, and integration across HR, professional development, and licensing.</li>
+            <li>Authored the UAE National Educators' Competency Framework (2025) for teachers, school leaders, and specialists, creating a unified reference for recruitment, appraisal, professional development, and career-path planning.</li>
+            <li>Led a competency-based skill-gap assessment for 13,000+ teachers and school leaders, translating framework domains into blueprints, analytics, and Training Needs Analyses at individual, school, regional, and national levels.</li>
+            <li>Served as senior project manager, SME, and technical lead for AI-in-education initiatives with the UAE Office of Artificial Intelligence and OpenAI–G42, including capacity-building programs and ministry-specific AI applications.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job__top">
+            <span class="job__role">AI Developer &amp; Data Analyst</span>
+            <span class="job__date">May 2024 — Aug 2024</span>
+          </div>
+          <p class="job__org">Emirates Schools Establishment, School Operations Sector · Dubai, UAE</p>
+          <ul>
+            <li>Developed AI-enabled and analytics-driven solutions to support student services, academic decision-making, and school operations.</li>
+            <li>Built MurshidAI, an AI agent for academic, social, and career guidance, providing students with personalized support and pathway recommendations.</li>
+            <li>Led development of the Freejna Schools Project website with role-based access controls and differentiated user journeys.</li>
+            <li>Created the Deira App in Power BI by integrating data from 240,000+ students, enabling school teams and executive leaders to access operational and performance insights.</li>
+            <li>Applied Python and machine learning to predictive-analysis use cases and integrated AI components into existing systems.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job__top">
+            <span class="job__role">Educational Data Analyst</span>
+            <span class="job__date">Jan 2024 — May 2024</span>
+          </div>
+          <p class="job__org">Emirates Schools Establishment, Dubai Schools Committee · Dubai, UAE</p>
+          <ul>
+            <li>Improved education data quality through structured validation, automation, and more reliable reporting workflows.</li>
+            <li>Analyzed operational and wellbeing datasets to support planning, performance review, and leadership decision-making.</li>
+            <li>Developed a centralized Power BI solution integrating school services and student-wellbeing data to provide actionable insights.</li>
+            <li>Created an AI-driven tutoring application and website for Grade 12 students, supporting personalized learning pathways and engagement.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job__top">
+            <span class="job__role">Mathematics Head of Department</span>
+            <span class="job__date">Jan 2018 — Jan 2024</span>
+          </div>
+          <p class="job__org">Emirates Schools Establishment, Nadd Al Hamar School · Dubai, UAE</p>
+          <ul>
+            <li>Led mathematics department planning, performance tracking, and school self-reflection to improve learning outcomes and operational effectiveness.</li>
+            <li>Developed an MS Access database to analyze assessment data and drive intervention planning, contributing to a 23% improvement in overall mathematics results.</li>
+            <li>Used learner-performance indicators to guide differentiated instruction, teacher support, and departmental planning.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job__top">
+            <span class="job__role">Mathematics Lead Teacher</span>
+            <span class="job__date">Sep 2015 — Dec 2017</span>
+          </div>
+          <p class="job__org">Roots International School · Cairo, Egypt</p>
+          <ul>
+            <li>Led departmental work in mathematics planning, assessment, instruction, and data analysis to improve student achievement.</li>
+            <li>Contributed to professional-development materials for teachers and introduced technology-enhanced teaching approaches.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job__top">
+            <span class="job__role">IGCSE / IAL Mathematics Teacher</span>
+            <span class="job__date">Jan 2012 — May 2015</span>
+          </div>
+          <p class="job__org">Egypt British International School · Cairo, Egypt</p>
+          <ul>
+            <li>Taught Pearson Edexcel and Cambridge courses at O-Level and A-Level.</li>
+            <li>Delivered professional development on mathematics instruction and data analysis, supporting a 90% success rate and recognition for top student performance in IGCSE mathematics for two consecutive years.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Selected Projects &amp; Impact</h2>
+        <ul class="impact-list">
+          <li><strong>"My Journey" Performance Platform —</strong> redesigned for ~25,000 users with KPI banks and AI-generated goal and competency suggestions.</li>
+          <li><strong>UAE National Educators' Competency Framework (2025) —</strong> unified reference for recruitment, appraisal, development, and career paths.</li>
+          <li><strong>National Skill-Gap Assessment —</strong> blueprints, analytics, and TNA for 13,000+ teachers and leaders across four tiers.</li>
+          <li><strong>Deira App (Power BI) —</strong> integrated data from 240,000+ students into one operational and performance view.</li>
+          <li><strong>Aoun —</strong> AI-powered psychometric application; 1st place, UAE Hackathon 2024 (Innovative Government Employees).</li>
+        </ul>
+      </section>
+
+      <div class="grid">
+        <section class="section">
+          <h2>Education</h2>
+          <div class="stack__item">
+            <div class="p">MSc, Educational Technology</div>
+            <div class="s">Edinburgh Napier University, Edinburgh, UK · 2026 (in progress) — thesis focus: Educational Data Analysis</div>
+          </div>
+          <div class="stack__item">
+            <div class="p">BEng, Civil Engineering</div>
+            <div class="s">Ain Shams University, Cairo, Egypt · 2011 — minor: Public Works</div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Awards</h2>
+          <div class="stack__item">
+            <div class="p">1st Place — UAE Hackathon 2024</div>
+            <div class="s">Innovative Government Employees, for "Aoun," an AI-powered psychometric application</div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Certifications</h2>
+          <div class="stack__item">
+            <div class="p">UAE Mathematics Teaching License</div>
+            <div class="s">Ministry of Education, UAE · 2023</div>
+          </div>
+          <div class="stack__item">
+            <div class="p">Microsoft Innovative Educator (MIE)</div>
+            <div class="s">Microsoft · 2020</div>
+          </div>
+          <div class="stack__item">
+            <div class="p">Educational Technology Innovation</div>
+            <div class="s">Cambridge International Certificate for KS4 Teachers · 2017</div>
+          </div>
+          <div class="stack__item">
+            <div class="p">Pearson Edexcel IAL Mathematics Training</div>
+            <div class="s">Pearson · 2015</div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Technical Tools</h2>
+          <p class="tools">
+            Power BI · Python · SQL · Machine Learning · HTML · CSS · JavaScript ·
+            MS Access · Moodle · LaTeX · AI / NLP Tools
+          </p>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

@@ -44,6 +44,9 @@
       <div class="cursor__ring"></div>
     </div>
 
+    <!-- Floating image preview for linked work rows (enhancement) -->
+    <div class="work-preview" aria-hidden="true"><img alt="" /></div>
+
     <!-- ============================ HEADER ============================ -->
     <header class="header" data-header>
       <div class="header__inner">
@@ -97,6 +100,7 @@
       <div class="menu-overlay__foot">
         <a href="mailto:hany.shennawy@live.com">hany.shennawy@live.com</a>
         <a href="https://www.linkedin.com/in/hany-moussa-9239b77a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="%BASE_URL%Hany-Moussa-CV.pdf" download="Hany-Moussa-CV.pdf">Download CV</a>
       </div>
     </div>
 
@@ -139,6 +143,16 @@
                 <dd>Open to leadership roles</dd>
               </div>
             </dl>
+          </div>
+
+          <div class="hero__actions" data-reveal>
+            <a class="btn btn--solid" href="%BASE_URL%Hany-Moussa-CV.pdf" download="Hany-Moussa-CV.pdf" data-magnetic>
+              <span>Download CV</span>
+              <span class="btn__icon btn__icon--down" aria-hidden="true">
+                <svg viewBox="0 0 16 16" width="14" height="14" fill="none"><path d="M8 2.5v7m0 0L4.75 6.25M8 9.5l3.25-3.25M3 13h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </a>
+            <a class="btn btn--line" href="#contact">Get in touch</a>
           </div>
         </div>
 
@@ -220,7 +234,7 @@
             </span>
           </li>
 
-          <li class="project" data-reveal>
+          <li class="project" data-reveal data-preview="images/field-competency-framework.jpg">
             <span class="project__index">02</span>
             <div class="project__body">
               <h3 class="project__title">UAE National Educators’ Competency Framework</h3>
@@ -240,7 +254,7 @@
             </span>
           </li>
 
-          <li class="project" data-reveal>
+          <li class="project" data-reveal data-preview="images/field-skill-gap.jpg">
             <span class="project__index">03</span>
             <div class="project__body">
               <h3 class="project__title">National Skill-Gap Assessment</h3>
@@ -279,7 +293,7 @@
             </span>
           </li>
 
-          <li class="project" data-reveal>
+          <li class="project" data-reveal data-preview="images/field-power-bi.jpg">
             <span class="project__index">05</span>
             <div class="project__body">
               <h3 class="project__title">The Deira App</h3>
@@ -320,10 +334,63 @@
         </ol>
       </section>
 
+      <!-- ============================ IN THE FIELD (GALLERY) ============================ -->
+      <section class="gallery section" id="gallery" aria-labelledby="gallery-title">
+        <div class="section__head">
+          <p class="section__eyebrow">03 / In the Field</p>
+          <h2 class="section__title" id="gallery-title" data-reveal>
+            Strategy, in the room where it happens.
+          </h2>
+        </div>
+
+        <div class="gallery__grid">
+          <figure class="gallery__item" data-reveal>
+            <img src="%BASE_URL%images/field-competency-framework.jpg" alt="Hany Moussa presenting the national educators' career-progression framework on screen" width="1600" height="942" loading="lazy" decoding="async" />
+            <figcaption>Presenting the national career-progression framework</figcaption>
+          </figure>
+          <figure class="gallery__item" data-reveal>
+            <img src="%BASE_URL%images/field-warm.jpg" alt="Hany Moussa smiling at a professional event" width="984" height="1600" loading="lazy" decoding="async" />
+            <figcaption>Between sessions</figcaption>
+          </figure>
+          <figure class="gallery__item" data-reveal>
+            <img src="%BASE_URL%images/field-power-bi.jpg" alt="Hany Moussa presenting a Power BI dashboard" width="1600" height="888" loading="lazy" decoding="async" />
+            <figcaption>Power BI dashboards in review</figcaption>
+          </figure>
+          <figure class="gallery__item" data-reveal>
+            <img src="%BASE_URL%images/field-skill-gap.jpg" alt="Hany Moussa presenting skill-gap analytics summarised by project" width="1600" height="826" loading="lazy" decoding="async" />
+            <figcaption>Skill-gap analytics, summarised by project</figcaption>
+          </figure>
+          <figure class="gallery__item" data-reveal>
+            <img src="%BASE_URL%images/field-dialogue.jpg" alt="Hany Moussa in conversation with a colleague" width="1600" height="1030" loading="lazy" decoding="async" />
+            <figcaption>In dialogue with stakeholders</figcaption>
+          </figure>
+          <figure class="gallery__item" data-reveal>
+            <img src="%BASE_URL%images/field-personality.jpg" alt="Full-length portrait of Hany Moussa in a corridor" width="853" height="1280" loading="lazy" decoding="async" />
+            <figcaption>On site</figcaption>
+          </figure>
+          <figure class="gallery__item" data-reveal>
+            <img src="%BASE_URL%images/field-stakeholders.jpg" alt="Hany Moussa listening in a stakeholder meeting" width="1600" height="866" loading="lazy" decoding="async" />
+            <figcaption>Stakeholder alignment workshop</figcaption>
+          </figure>
+          <figure class="gallery__item" data-reveal>
+            <img src="%BASE_URL%images/field-leadership.jpg" alt="Hany Moussa walking through a Ministry corridor with a colleague" width="1280" height="799" loading="lazy" decoding="async" />
+            <figcaption>On the move</figcaption>
+          </figure>
+          <figure class="gallery__item" data-reveal>
+            <img src="%BASE_URL%images/field-office.jpg" alt="Hany Moussa working at a screen in a modern office" width="1600" height="965" loading="lazy" decoding="async" />
+            <figcaption>Heads-down</figcaption>
+          </figure>
+          <figure class="gallery__item" data-reveal>
+            <img src="%BASE_URL%images/field-assessment.jpg" alt="Hany Moussa presenting an assessment-methodology slide" width="1600" height="900" loading="lazy" decoding="async" />
+            <figcaption>Assessment-methodology session</figcaption>
+          </figure>
+        </div>
+      </section>
+
       <!-- ============================ EXPERTISE ============================ -->
       <section class="expertise section" id="expertise" aria-labelledby="expertise-title">
         <div class="section__head">
-          <p class="section__eyebrow">03 / Expertise</p>
+          <p class="section__eyebrow">04 / Expertise</p>
           <h2 class="section__title" id="expertise-title" data-reveal>
             Where governance meets data and AI.
           </h2>
@@ -383,7 +450,7 @@
       <!-- ============================ ABOUT ============================ -->
       <section class="about section" id="about" aria-labelledby="about-title">
         <div class="section__head">
-          <p class="section__eyebrow">04 / About</p>
+          <p class="section__eyebrow">05 / About</p>
           <h2 class="section__title" id="about-title" data-reveal>
             From the classroom to national strategy.
           </h2>
@@ -394,17 +461,16 @@
             <div class="portrait__media">
               <img
                 class="portrait__img"
-                src="%BASE_URL%images/hany-moussa.jpg"
-                alt="Portrait of Hany Moussa"
-                width="900"
-                height="1100"
+                src="%BASE_URL%images/portrait-main.jpg"
+                alt="Hany Moussa, Principal Project Manager, in a studio portrait"
+                width="973"
+                height="1600"
                 loading="lazy"
                 decoding="async"
                 onerror="this.remove()"
               />
               <div class="portrait__fallback" aria-hidden="true">
                 <span class="portrait__initials">HM</span>
-                <span class="portrait__note">Add your photo at public/images/hany-moussa.jpg</span>
               </div>
             </div>
             <figcaption class="portrait__cap">Hany Moussa · Dubai, UAE</figcaption>
@@ -534,7 +600,7 @@
       <!-- ============================ CONTACT ============================ -->
       <section class="contact section" id="contact" aria-labelledby="contact-title">
         <div class="contact__inner">
-          <p class="section__eyebrow">05 / Contact</p>
+          <p class="section__eyebrow">06 / Contact</p>
           <h2 class="contact__title" id="contact-title" data-reveal>
             Let’s build what’s next<br />for education.
           </h2>
@@ -557,6 +623,13 @@
               <span class="contact__channel-value">Dubai, UAE</span>
             </div>
           </div>
+
+          <a class="btn btn--solid contact__cv" href="%BASE_URL%Hany-Moussa-CV.pdf" download="Hany-Moussa-CV.pdf" data-magnetic data-reveal>
+            <span>Download CV (PDF)</span>
+            <span class="btn__icon btn__icon--down" aria-hidden="true">
+              <svg viewBox="0 0 16 16" width="14" height="14" fill="none"><path d="M8 2.5v7m0 0L4.75 6.25M8 9.5l3.25-3.25M3 13h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
         </div>
       </section>
     </main>

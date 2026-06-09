@@ -28,11 +28,31 @@ npm run preview  # serve the production build locally
 npm run typecheck
 ```
 
-## Add your photo
+## Photos & gallery
 
-Drop a portrait at **`public/images/hany-moussa.jpg`** (portrait ratio, roughly
-900 × 1100 or larger). Until then a typographic placeholder is shown. No code
-changes are needed; the filename is already wired up.
+Curated, web-optimized photos live in [`public/images/`](./public/images): the
+About portrait (`portrait-main.jpg`) and ten `field-*.jpg` images that power the
+"In the Field" gallery and the hover previews on linked work rows. The full set
+of original photographs is preserved in `assets-source/photos/` (kept in version
+control, not shipped to the live site).
+
+To re-curate from new originals: drop them in `public/images/`, edit the mapping
+in [`scripts/process-photos.ps1`](./scripts/process-photos.ps1), and run it. It
+resizes to web-friendly sizes, applies clean slugs, and archives the originals.
+
+## Downloadable CV
+
+The site serves a branded PDF at `public/Hany-Moussa-CV.pdf`, linked from the
+hero, the contact section, and the mobile menu. The source is
+[`cv-template/cv.html`](./cv-template/cv.html) (it reuses the site's fonts and
+palette). After editing it, regenerate the PDF with:
+
+```powershell
+pwsh -File scripts/generate-cv.ps1
+```
+
+This renders the PDF with an installed headless Chrome or Edge, so no extra
+dependencies are required.
 
 ## Edit the content
 

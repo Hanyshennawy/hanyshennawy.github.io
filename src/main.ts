@@ -12,6 +12,7 @@ import { initSmoothScroll } from "./modules/smoothScroll";
 import { initAnimations } from "./modules/animations";
 import { initNav } from "./modules/nav";
 import { initCursor } from "./modules/cursor";
+import { initWorkPreview } from "./modules/workPreview";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -27,6 +28,7 @@ function boot(): void {
     initAnimations();
     if (finePointer) {
       initCursor();
+      initWorkPreview();
     }
   }
 
